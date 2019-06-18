@@ -82,38 +82,3 @@ func isConsecutiveChar(s string) bool {
 	}
 	return false
 }
-
-/*func isConsecutiveChar(s string) bool {
-	unmatchedCount := 0
-	var tmp rune
-	length := len(s)
-	for i, ch := range s {
-		if i == 0 {
-			tmp = ch
-		}
-		if i%2 != 0 { //even positioned character
-			if ch != tmp {
-				unmatchedCount++
-			}
-		} else {
-			if (length - 1) == i { //final entry
-				if ch != tmp {
-					unmatchedCount++
-				}
-			}
-		}
-		if length%2 == 0 {
-			if unmatchedCount > 0 {
-				return false
-			}
-		} else {
-			if unmatchedCount > 0 {
-				return false
-			}
-		}
-		tmp = ch
-	}
-	fmt.Println(unmatchedCount)
-	return true
-}
-*/
